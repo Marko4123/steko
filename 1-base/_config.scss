@@ -10,8 +10,9 @@ $color_theme_third: #f5f5f5;
   transition: all 0.5s ease-out;
 }
 
-//FONTS
-@import url("https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,cyrillic-ext");
+* {
+  box-sizing: border-box;
+}
 
 body {
   font-family: "Open Sans", sans-serif;
