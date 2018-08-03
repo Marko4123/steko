@@ -10641,6 +10641,15 @@ nav.navbar-light .navbar-nav .nav-link {
     -o-transition: all 0.5s ease-out;
     transition: all 0.5s ease-out;
     color: #fec200; }
+nav.navbar-light .navbar-nav .show > .nav-link {
+  color: #fec200; }
+nav .mega-dropdown {
+  position: static !important; }
+nav .mega-dropdown-menu {
+  padding: 10px 10px;
+  width: 100%;
+  background: #fff;
+  background-size: cover; }
 
 @media (max-width: 767.98px) {
   .top-bar-wrap {

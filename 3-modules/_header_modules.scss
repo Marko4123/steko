@@ -51,6 +51,19 @@ nav {
           color: $color_theme_second;
         }
       }
+      .show > .nav-link {
+        color: $color_theme_second;
+      }
     }
+  }
+
+  .mega-dropdown {
+    position: static !important;
+  }
+  .mega-dropdown-menu {
+    padding: 10px 10px;
+    width: 100%;
+    background: #fff;
+    background-size: cover;
   }
 }
