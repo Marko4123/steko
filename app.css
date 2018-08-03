@@ -10589,7 +10589,8 @@ body {
 
 .address-info {
   display: flex;
-  flex-wrap: wrap; }
+  flex-wrap: wrap;
+  align-items: baseline; }
   .address-info ul {
     margin-left: 15px;
     border-left: 1px solid #ccc;
