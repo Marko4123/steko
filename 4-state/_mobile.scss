@@ -1,0 +1,21 @@
+// Small devices (landscape phones, 576px and up)
+
+//HEADER
+@media (max-width: 767.98px) {
+  .top-bar-wrap {
+    display: block;
+    text-align: center;
+  }
+
+  .l-logo-info,
+  .address-info {
+    display: block;
+    text-align: center;
+
+    ul {
+      border: none;
+      margin: 0;
+      padding: 0;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+$main-bg: #fff;
+$main-color: #000;
+$color_theme_first: #01477f;
+$color_theme_second: #fec200;
+$color_theme_third: #f5f5f5;
+@mixin easeOut {
+  -webkit-transition: all 0.5s ease-out;
+  -moz-transition: all 0.5s ease-out;
+  -o-transition: all 0.5s ease-out;
+  transition: all 0.5s ease-out;
+}
+
+//FONTS
+@import url("https://fonts.googleapis.com/css?family=Open+Sans&subset=cyrillic,cyrillic-ext");
+
+body {
+  font-family: "Open Sans", sans-serif;
+  font-weight: normal;
+  font-size: 16px;
+  line-height: 28px;
+  background: $main-bg;
+  color: $main-color;
+}
