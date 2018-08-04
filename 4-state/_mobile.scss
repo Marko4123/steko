@@ -1,11 +1,15 @@
 @media (max-width: 544px) {
-  //Slider
-  .slider-header h1 {
-    font-size: 16px !important;
+  h1 {
+    font-size: 18px !important;
   }
 }
 
 @media (max-width: 767.98px) {
+  h1,
+  h2,
+  h3 {
+    font-size: 22px;
+  }
   .top-bar-wrap {
     display: block;
     text-align: center;
@@ -27,13 +31,19 @@
   .slider-sub-header {
     display: none;
   }
-  .slider-header h1 {
-    font-size: 22px;
-  }
 }
 
 @media (max-width: 992px) {
   .nav-fill .nav-item {
     text-align: left !important;
+  }
+
+  //Short Info on Index page
+  .short-info {
+    margin-top: 0 !important;
+
+    .short-info-grid {
+      grid-template-columns: 1fr !important;
+    }
   }
 }
