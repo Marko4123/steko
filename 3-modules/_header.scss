@@ -3,17 +3,16 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 14px;
 
   i {
-    color: $color_theme_second;
+    color: $color_yellow;
   }
   .mail-div {
     a {
       color: $main-color;
       text-decoration: none;
       &:hover {
-        color: $color_theme_second;
+        color: $color_yellow;
         @include easeOut();
       }
     }
@@ -33,6 +32,6 @@
   }
 
   i {
-    color: $color_theme_second;
+    color: $color_yellow;
   }
 }

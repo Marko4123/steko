@@ -1,6 +1,10 @@
+header {
+  font-size: $main_font_size - 2px;
+}
+
 //TOP BAR
 .l-top-bar {
-  background: $color_theme_third;
+  background: $color_grey;
   padding: 10px 0;
 }
 
@@ -10,5 +14,4 @@
   padding: 10px 0;
   justify-content: space-between;
   flex-wrap: wrap;
-  font-size: 14px;
 }
