@@ -1,17 +1,17 @@
 header {
   font-size: $main-font-size - 2px;
-}
 
-//TOP BAR
-.l-top-bar {
-  background: $color-grey;
-  padding: 10px 0;
-}
+  //TOP BAR
+  .l-top-bar {
+    background: $color-grey;
+    padding: 10px 0;
+  }
 
-//Logo And INfo for contacts
-.l-logo-info {
-  display: flex;
-  padding: 10px 0;
-  justify-content: space-between;
-  flex-wrap: wrap;
+  //Logo And INfo for contacts
+  .l-logo-info {
+    display: flex;
+    padding: 10px 0;
+    justify-content: space-between;
+    flex-wrap: wrap;
+  }
 }
