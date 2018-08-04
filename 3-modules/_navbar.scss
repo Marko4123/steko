@@ -9,11 +9,11 @@ nav {
 
         &:hover {
           @include easeOut();
-          color: $color_yellow;
+          color: $color-yellow;
         }
       }
       .show > .nav-link {
-        color: $color_yellow;
+        color: $color-yellow;
       }
     }
   }
@@ -28,11 +28,11 @@ nav {
     background-size: cover;
 
     .dropdown-header {
-      color: $color_blue;
+      color: $color-blue;
       text-transform: uppercase;
-      font-size: $main_font_size + 2px;
+      font-size: $main-font-size + 2px;
       font-weight: 700;
-      border-left: 5px solid $color_yellow;
+      border-left: 5px solid $color-yellow;
       margin: 10px 0;
       white-space: normal !important;
     }
@@ -42,7 +42,7 @@ nav {
 
       a {
         color: $main-color;
-        font-size: $main_font_size - 2px;
+        font-size: $main-font-size - 2px;
         text-transform: uppercase;
         text-decoration: none;
         border-bottom: 2px solid rgba(0, 0, 0, 0.15);
@@ -50,10 +50,10 @@ nav {
         display: block;
 
         &.current {
-          border-bottom: 2px solid $color_yellow;
+          border-bottom: 2px solid $color-yellow;
         }
       }
-      @include LineLeftToRight($color_yellow);
+      @include LineLeftToRight($color-yellow);
     }
   }
 }

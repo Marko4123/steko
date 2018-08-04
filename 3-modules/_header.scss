@@ -5,14 +5,14 @@
   flex-wrap: wrap;
 
   i {
-    color: $color_yellow;
+    color: $color-yellow;
   }
   .mail-div {
     a {
       color: $main-color;
       text-decoration: none;
       &:hover {
-        color: $color_yellow;
+        color: $color-yellow;
         @include easeOut();
       }
     }
@@ -32,6 +32,6 @@
   }
 
   i {
-    color: $color_yellow;
+    color: $color-yellow;
   }
 }

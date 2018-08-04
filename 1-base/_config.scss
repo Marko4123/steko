@@ -1,9 +1,9 @@
 $main-bg: #fff;
 $main-color: #000;
-$color_blue: #01477f;
-$color_yellow: #fec200;
-$color_grey: #f5f5f5;
-$main_font_size: 16px;
+$color-blue: #01477f;
+$color-yellow: #fec200;
+$color-grey: #f5f5f5;
+$main-font-size: 16px;
 
 //Mixin on hover line from left to right
 @mixin LineLeftToRight($color) {
@@ -45,7 +45,7 @@ $main_font_size: 16px;
 body {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
-  font-size: $main_font_size;
+  font-size: $main-font-size;
   line-height: 28px;
   background: $main-bg;
   color: $main-color;
