@@ -10649,7 +10649,7 @@ nav .mega-dropdown {
 nav .mega-dropdown-menu {
   padding: 10px 10px;
   width: 100%;
-  background: #fff url(../img/nav-bg.jpg) no-repeat center center;
+  background: #fff url(img/nav-bg.jpg) no-repeat center center;
   background-size: cover; }
   nav .mega-dropdown-menu .dropdown-header {
     color: #01477f;
