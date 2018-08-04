@@ -1,0 +1,109 @@
+//Rotate square buttons
+.rotate-square-btn {
+  width: 80px;
+  height: 80px;
+  text-align: center;
+  background: $color-blue;
+  transform: rotate(45deg);
+  -webkit-transform: rotate(45deg);
+  -moz-transform: rotate(45deg);
+  -ms-transform: rotate(45deg);
+  border: 6px solid #fff;
+  box-shadow: 4px 0 8px rgba(0, 0, 0, 0.04);
+  -webkit-box-shadow: 4px 0 8px rgba(0, 0, 0, 0.04);
+  border-radius: 3px;
+  position: relative;
+  @include TransitionLinear($time: 0.3s);
+  margin: 20px;
+  display: inline-block;
+
+  img {
+    text-align: center;
+    display: inline-block;
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+    margin: 0 auto;
+    filter: invert(100%);
+    -moz-filter: invert(100%);
+    -webkit-filter: invert(100%);
+    -ms-filter: invert(100%);
+    @include TransitionLinear($time: 0.5s);
+    max-width: 100%;
+    height: auto;
+  }
+
+  &:hover {
+    background-color: $color-yellow;
+    -webkit-box-shadow: 4px 0 25px 5px rgba(0, 0, 0, 0.1);
+    transform: rotate(-45deg);
+    -webkit-transform: rotate(-45deg);
+    -moz-transform: rotate(-45deg);
+    -ms-transform: rotate(-45deg);
+
+    img {
+      filter: inherit;
+      -moz-filter: inherit;
+      -webkit-filter: inherit;
+      -ms-filter: inherit;
+      transform: rotate(45deg);
+      -webkit-transform: rotate(45deg);
+      -moz-transform: rotate(45deg);
+      -ms-transform: rotate(45deg);
+    }
+  }
+}
+
+//Read more button
+a {
+  &.read-more-btn {
+    position: relative;
+    letter-spacing: 0.5px;
+    overflow: hidden;
+    @include TransitionLinear($time: 0.3s);
+    text-transform: uppercase;
+    line-height: normal;
+    display: inline-block;
+    margin: 10px 0px 0px 0px;
+    outline: none;
+    z-index: 1;
+    background-color: $color-yellow;
+    color: $color-blue;
+    border: 1px solid transparent;
+    font-size: 13px;
+    padding: 13px;
+    border-radius: 5px;
+    text-decoration: none;
+
+    span {
+      margin: 0 0 0 40px;
+    }
+
+    &::after {
+      content: "";
+      position: absolute;
+      @include TransitionLinear(0.3s);
+      background: rgba(0, 0, 0, 0.1);
+      width: 35%;
+      height: 200%;
+      z-index: 1;
+      right: 0;
+      top: 0;
+      margin: -5px 0 0 -5px;
+      -webkit-transform-origin: 0 0;
+      -webkit-transform: rotate(-20deg);
+      -moz-transform-origin: 0 0;
+      -moz-transform: rotate(-20deg);
+      -ms-transform-origin: 0 0;
+      -ms-transform: rotate(-20deg);
+      transform-origin: 0 0;
+      transform: rotate(-20deg);
+    }
+
+    &:hover {
+      color: #ffffff;
+      background-color: $color-blue;
+    }
+  }
+}
