@@ -17,15 +17,17 @@
     .slider-header {
       background: $color-blue;
       padding: 10px 5px;
-      font-size: 32px;
       opacity: 0.8;
     }
 
     .slider-sub-header {
       background: $color-yellow;
       padding: 10px 5px;
-      font-size: 1.17em;
       opacity: 0.8;
+
+      @include mediaS {
+        display: none;
+      }
     }
   }
 }

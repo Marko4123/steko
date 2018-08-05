@@ -26,9 +26,81 @@
 
       h3 {
         text-transform: uppercase;
-        font-size: $main-font-size + 2;
         font-weight: 700;
       }
+
+      @include mediaMd {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @include mediaMd {
+      margin: 0;
+    }
+  }
+}
+
+//IMage Links on Index page
+.image-links-wrap {
+  margin-top: 20px;
+
+  .image-links-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-gap: 30px;
+
+    .image-links-box {
+      position: relative;
+
+      img {
+        margin: 0;
+      }
+
+      .image-links-overlay {
+        background: rgba(1, 71, 127, 0.75);
+        @include easeOut();
+        color: #fff;
+        position: absolute;
+        opacity: 0;
+        display: block;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+
+        .image-links-title {
+          position: absolute;
+          @include easeOut();
+          bottom: auto;
+          left: 50%;
+          top: 50%;
+          transform: translate(-50%, -50%);
+
+          h3 > a {
+            text-decoration: none;
+            color: #fff;
+            text-transform: uppercase;
+            font-weight: 700;
+          }
+        }
+      }
+      &:hover {
+        .image-links-overlay {
+          opacity: 1;
+        }
+      }
+    }
+
+    @include media-breakpoint-only(xs) {
+      grid-template-columns: 1fr;
+    }
+    @include media-breakpoint-only(sm) {
+      grid-template-columns: repeat(2, 1fr);
+    }
+    @include media-breakpoint-only(md) {
+      grid-template-columns: repeat(3, 1fr);
     }
   }
 }

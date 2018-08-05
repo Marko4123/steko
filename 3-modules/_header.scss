@@ -17,6 +17,11 @@
       }
     }
   }
+
+  @include mediaS() {
+    display: block;
+    text-align: center;
+  }
 }
 
 //Logo And INfo for contacts
@@ -33,5 +38,14 @@
 
   i {
     color: $color-yellow;
+  }
+
+  @include mediaS {
+    display: block;
+    text-align: center;
+
+    ul {
+      border: none;
+    }
   }
 }

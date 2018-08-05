@@ -5,6 +5,16 @@ $color-yellow: #fec200;
 $color-grey: #f5f5f5;
 $main-font-size: 16px;
 
+h1 {
+  font-size: 32px;
+}
+h2 {
+  font-size: 28px;
+}
+h3 {
+  font-size: 22px;
+}
+
 //MIxin TransitionLinear
 @mixin TransitionLinear($time) {
   -webkit-transition: all $time linear;
@@ -43,6 +53,25 @@ $main-font-size: 16px;
   transition: all 0.5s ease-out;
 }
 
+//Responsive
+@mixin mediaXS {
+  @media (max-width: 575.98px) {
+    @content;
+  }
+}
+
+@mixin mediaS {
+  @media (max-width: 767.98px) {
+    @content;
+  }
+}
+
+@mixin mediaMd {
+  @media (max-width: 991.98px) {
+    @content;
+  }
+}
+
 * {
   box-sizing: border-box;
 }
@@ -54,4 +83,20 @@ body {
   line-height: 28px;
   background: $main-bg;
   color: $main-color;
+}
+
+@include mediaXS {
+  h1,
+  h2,
+  h3 {
+    font-size: 16px !important;
+  }
+}
+
+@include mediaS {
+  h1,
+  h2,
+  h3 {
+    font-size: 22px;
+  }
 }

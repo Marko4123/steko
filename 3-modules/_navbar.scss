@@ -56,4 +56,9 @@ nav {
       @include LineLeftToRight($color-yellow);
     }
   }
+  @include mediaMd {
+    .nav-fill .nav-item {
+      text-align: left;
+    }
+  }
 }

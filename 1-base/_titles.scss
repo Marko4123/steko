@@ -1,0 +1,51 @@
+.main-title {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+
+  .main-title-content {
+    margin-bottom: 30px;
+    position: relative;
+    float: left;
+
+    h1 {
+      color: #fff;
+      padding: 17px 10px 15px 20px;
+      position: relative;
+      z-index: 1;
+      margin: 0px;
+      left: 0px;
+      text-transform: uppercase;
+      background-color: $color-yellow;
+    }
+
+    &::before {
+      background-color: $color-yellow;
+      content: "";
+      position: absolute;
+      right: -16px;
+      top: 0px;
+      width: 100%;
+      height: 100%;
+      -webkit-transform: skewX(30deg);
+      transform: skewX(30deg);
+      -ms-transform: skewX(30deg);
+    }
+
+    &::after {
+      content: "";
+      height: 100%;
+      top: 0px;
+      left: 114%;
+      left: -webkit-calc(100% - -26px);
+      left: -moz-calc(100% - -26px);
+      left: calc(100% - -26px);
+      position: absolute;
+      -ms-transform: skewX(30deg);
+      -webkit-transform: skewX(30deg);
+      transform: skewX(30deg);
+      width: 9000px;
+      background: #f3f3f3;
+    }
+  }
+}
