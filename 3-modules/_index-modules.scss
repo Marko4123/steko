@@ -79,15 +79,21 @@
 
 //Yellow part on Index Page
 .yellow-part-wrap {
-  display: grid;
-  display: -ms-grid;
-  grid-template-columns: repeat(2, 1fr);
+  display: flex;
   min-height: 230px;
+  @include mediaMd {
+    display: block;
+    min-height: 0;
+  }
 
   .light-yellow {
+    flex: 50%;
     background: #fbc228;
-    height: 100%;
     color: $color-blue;
+    min-height: 230px;
+    @include mediaMd {
+      min-height: 0;
+    }
 
     .yellow-part-title {
       float: right;
@@ -96,7 +102,6 @@
       padding-top: 80px;
       text-transform: uppercase;
       clear: both;
-
       @include mediaMd {
         float: none;
         text-align: center;
@@ -107,8 +112,12 @@
 
   .dark-yellow {
     background: #efb90b;
-    height: 100%;
     position: relative;
+    flex: 50%;
+    min-height: 230px;
+    @include mediaMd {
+      min-height: 0;
+    }
 
     &::before {
       content: "";
@@ -124,6 +133,10 @@
 
     .yellow-part-btn {
       padding-top: 80px;
+      @include mediaMd {
+        text-align: center;
+        padding: 10px 10px;
+      }
 
       a {
         padding: 16px 40px;
@@ -143,15 +156,6 @@
           background-color: $color-blue;
         }
       }
-      @include mediaMd {
-        text-align: center;
-        padding: 10px 10px;
-      }
     }
-  }
-
-  @include mediaMd {
-    grid-template-columns: 1fr;
-    min-height: 0;
   }
 }
