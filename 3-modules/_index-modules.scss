@@ -80,6 +80,7 @@
 //Yellow part on Index Page
 .yellow-part-wrap {
   display: grid;
+  display: -ms-grid;
   grid-template-columns: repeat(2, 1fr);
   min-height: 230px;
 
