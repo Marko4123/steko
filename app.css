@@ -13281,6 +13281,9 @@ nav .mega-dropdown-menu {
       text-transform: uppercase; }
     .short-info-wrap .short-info .color-yellow {
       color: #fec200; }
+    @media (max-width: 991.98px) {
+      .short-info-wrap .short-info {
+        margin: 0; } }
 
 .image-links-wrap {
   margin-top: 20px; }

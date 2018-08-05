@@ -20,6 +20,10 @@
     .color-yellow {
       color: $color-yellow;
     }
+
+    @include mediaMd {
+      margin: 0;
+    }
   }
 }
 
