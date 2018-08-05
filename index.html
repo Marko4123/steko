@@ -6,8 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Steko България</title>
-    <link rel="preload" as="style" href="css/bootstrap.min.css" onload="this.rel='stylesheet'">
-    <link rel="preload" as="style" href="app.min.css" onload="this.rel='stylesheet'">
+
 
 
 </head>
@@ -462,7 +461,18 @@
             </div>
         </main>
     </div>
+    <script>
 
+        var styleSheet1 = document.createElement("link");
+        styleSheet1.href = "css/bootstrap.min.css";
+        styleSheet1.rel = "stylesheet";
+        document.head.appendChild(styleSheet1);
+
+        var styleSheet2 = document.createElement("link");
+        styleSheet2.href = "app.min.css";
+        styleSheet2.rel = "stylesheet";
+        document.head.appendChild(styleSheet2);
+    </script>
     <script src="js/jquery-3.3.1.min.js"></script>
     <script src="js/bootstrap.min.js"></script>
 </body>
