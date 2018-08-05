@@ -76,3 +76,81 @@
     }
   }
 }
+
+//Yellow part on Index Page
+.yellow-part-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 230px;
+
+  .light-yellow {
+    background: #fbc228;
+    height: 100%;
+    color: $color-blue;
+
+    .yellow-part-title {
+      float: right;
+      padding-right: 80px;
+      padding-left: 10px;
+      padding-top: 80px;
+      text-transform: uppercase;
+      clear: both;
+
+      @include mediaMd {
+        float: none;
+        text-align: center;
+        padding: 10px 10px;
+      }
+    }
+  }
+
+  .dark-yellow {
+    background: #efb90b;
+    height: 100%;
+    position: relative;
+
+    &::before {
+      content: "";
+      border-right: 40px solid;
+      border-top: 115px solid transparent;
+      border-bottom: 115px solid transparent;
+      left: -40px;
+      position: absolute;
+      top: 0;
+      z-index: 9;
+      color: #efb90b;
+    }
+
+    .yellow-part-btn {
+      padding-top: 80px;
+
+      a {
+        padding: 16px 40px;
+        border: 1px solid;
+        border-color: $color-blue;
+        text-transform: uppercase;
+        line-height: normal;
+        display: inline-block;
+        outline: none;
+        letter-spacing: 1px;
+        @include easeOut();
+        color: #666;
+        text-decoration: none;
+
+        &:hover {
+          color: $color-yellow;
+          background-color: $color-blue;
+        }
+      }
+      @include mediaMd {
+        text-align: center;
+        padding: 10px 10px;
+      }
+    }
+  }
+
+  @include mediaMd {
+    grid-template-columns: 1fr;
+    min-height: 0;
+  }
+}

@@ -13326,4 +13326,67 @@ nav .mega-dropdown-menu {
     .image-links-wrap .image-links-box:hover .image-links-overlay {
       opacity: 1; }
 
+.yellow-part-wrap {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  min-height: 230px; }
+  .yellow-part-wrap .light-yellow {
+    background: #fbc228;
+    height: 100%;
+    color: #01477f; }
+    .yellow-part-wrap .light-yellow .yellow-part-title {
+      float: right;
+      padding-right: 80px;
+      padding-left: 10px;
+      padding-top: 80px;
+      text-transform: uppercase;
+      clear: both; }
+      @media (max-width: 991.98px) {
+        .yellow-part-wrap .light-yellow .yellow-part-title {
+          float: none;
+          text-align: center;
+          padding: 10px 10px; } }
+  .yellow-part-wrap .dark-yellow {
+    background: #efb90b;
+    height: 100%;
+    position: relative; }
+    .yellow-part-wrap .dark-yellow::before {
+      content: "";
+      border-right: 40px solid;
+      border-top: 115px solid transparent;
+      border-bottom: 115px solid transparent;
+      left: -40px;
+      position: absolute;
+      top: 0;
+      z-index: 9;
+      color: #efb90b; }
+    .yellow-part-wrap .dark-yellow .yellow-part-btn {
+      padding-top: 80px; }
+      .yellow-part-wrap .dark-yellow .yellow-part-btn a {
+        padding: 16px 40px;
+        border: 1px solid;
+        border-color: #01477f;
+        text-transform: uppercase;
+        line-height: normal;
+        display: inline-block;
+        outline: none;
+        letter-spacing: 1px;
+        -webkit-transition: all 0.5s ease-out;
+        -moz-transition: all 0.5s ease-out;
+        -o-transition: all 0.5s ease-out;
+        transition: all 0.5s ease-out;
+        color: #666;
+        text-decoration: none; }
+        .yellow-part-wrap .dark-yellow .yellow-part-btn a:hover {
+          color: #fec200;
+          background-color: #01477f; }
+      @media (max-width: 991.98px) {
+        .yellow-part-wrap .dark-yellow .yellow-part-btn {
+          text-align: center;
+          padding: 10px 10px; } }
+  @media (max-width: 991.98px) {
+    .yellow-part-wrap {
+      grid-template-columns: 1fr;
+      min-height: 0; } }
+
 /*# sourceMappingURL=app.css.map */
