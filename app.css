@@ -13208,6 +13208,8 @@ nav .mega-dropdown-menu {
     border-left: 5px solid #fec200;
     margin: 10px 0;
     white-space: normal !important; }
+  nav .mega-dropdown-menu ul {
+    list-style: none; }
   nav .mega-dropdown-menu li {
     position: relative; }
     nav .mega-dropdown-menu li a {
