@@ -13276,75 +13276,51 @@ nav .mega-dropdown-menu {
     padding: 10px;
     margin-top: -85px; }
     .short-info-wrap .short-info h1 {
-      font-size: 32px;
       color: #01477f; }
+    .short-info-wrap .short-info h3 {
+      text-transform: uppercase; }
     .short-info-wrap .short-info .color-yellow {
       color: #fec200; }
-    .short-info-wrap .short-info .short-info-grid {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      grid-gap: 30px; }
-      .short-info-wrap .short-info .short-info-grid h3 {
-        text-transform: uppercase;
-        font-weight: 700; }
-      @media (max-width: 991.98px) {
-        .short-info-wrap .short-info .short-info-grid {
-          grid-template-columns: 1fr; } }
-    @media (max-width: 991.98px) {
-      .short-info-wrap .short-info {
-        margin: 0; } }
 
 .image-links-wrap {
   margin-top: 20px; }
-  .image-links-wrap .image-links-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    grid-gap: 30px; }
-    .image-links-wrap .image-links-grid .image-links-box {
-      position: relative; }
-      .image-links-wrap .image-links-grid .image-links-box img {
-        margin: 0; }
-      .image-links-wrap .image-links-grid .image-links-box .image-links-overlay {
-        background: rgba(1, 71, 127, 0.75);
+  .image-links-wrap .image-links-box {
+    position: relative;
+    margin-bottom: 20px; }
+    .image-links-wrap .image-links-box img {
+      margin: 0; }
+    .image-links-wrap .image-links-box .image-links-overlay {
+      background: rgba(1, 71, 127, 0.75);
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out;
+      color: #fff;
+      position: absolute;
+      opacity: 0;
+      display: block;
+      bottom: 0;
+      left: 0;
+      right: 0;
+      width: 100%;
+      height: 100%;
+      overflow: hidden; }
+      .image-links-wrap .image-links-box .image-links-overlay .image-links-title {
+        position: absolute;
         -webkit-transition: all 0.5s ease-out;
         -moz-transition: all 0.5s ease-out;
         -o-transition: all 0.5s ease-out;
         transition: all 0.5s ease-out;
-        color: #fff;
-        position: absolute;
-        opacity: 0;
-        display: block;
-        bottom: 0;
-        left: 0;
-        right: 0;
-        width: 100%;
-        height: 100%;
-        overflow: hidden; }
-        .image-links-wrap .image-links-grid .image-links-box .image-links-overlay .image-links-title {
-          position: absolute;
-          -webkit-transition: all 0.5s ease-out;
-          -moz-transition: all 0.5s ease-out;
-          -o-transition: all 0.5s ease-out;
-          transition: all 0.5s ease-out;
-          bottom: auto;
-          left: 50%;
-          top: 50%;
-          transform: translate(-50%, -50%); }
-          .image-links-wrap .image-links-grid .image-links-box .image-links-overlay .image-links-title h3 > a {
-            text-decoration: none;
-            color: #fff;
-            text-transform: uppercase;
-            font-weight: 700; }
-      .image-links-wrap .image-links-grid .image-links-box:hover .image-links-overlay {
-        opacity: 1; }
-    @media (max-width: 575.98px) {
-      .image-links-wrap .image-links-grid {
-        grid-template-columns: 1fr; } }
-    @media (min-width: 576px) and (max-width: 767.98px) {
-      .image-links-wrap .image-links-grid {
-        grid-template-columns: repeat(2, 1fr); } }
-    @media (min-width: 768px) and (max-width: 991.98px) {
-      .image-links-wrap .image-links-grid {
-        grid-template-columns: repeat(3, 1fr); } }
+        bottom: auto;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%); }
+        .image-links-wrap .image-links-box .image-links-overlay .image-links-title h3 > a {
+          text-decoration: none;
+          color: #fff;
+          text-transform: uppercase;
+          font-weight: 700; }
+    .image-links-wrap .image-links-box:hover .image-links-overlay {
+      opacity: 1; }
 
 /*# sourceMappingURL=app.css.map */
