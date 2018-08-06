@@ -9,6 +9,18 @@
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 24px 0px;
     padding: 10px;
     margin-top: -85px;
+    display: flex;
+    flex-wrap: wrap;
+    .short-info-box {
+      flex: 0 0 50%;
+      max-width: 50%;
+      padding-right: 15px;
+      padding-left: 15px;
+      @include mediaMd {
+        flex: 0 0 100%;
+        max-width: 100%;
+      }
+    }
 
     h1 {
       color: $color-blue;
@@ -31,12 +43,35 @@
 .image-links-wrap {
   margin-top: 20px;
 
+  .test-grid {
+    display: flex;
+    flex-wrap: wrap;
+  }
   .image-links-box {
     position: relative;
     margin-bottom: 20px;
+    flex: 0 0 25%; /* explanation below */
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+
+    @include mediaMd {
+      flex: 0 0 33.333333%;
+      max-width: 33.333333%;
+    }
+    @include mediaS {
+      flex: 0 0 50%;
+      max-width: 50%;
+    }
+    @include mediaXS {
+      flex: 100%;
+      max-width: 100%;
+    }
 
     img {
       margin: 0;
+      width: 100%;
+      height: auto;
     }
 
     .overlay {
