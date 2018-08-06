@@ -1,51 +1,63 @@
-//TOP BAR
-.top-bar-wrap {
-  display: flex;
-  justify-content: space-between;
-  flex-wrap: wrap;
+#top-bar {
+  width: 100%;
+  padding: 5px 0;
+  background: $color-grey;
 
-  i {
-    color: $color-yellow;
-  }
-  .mail-div {
-    a {
-      color: $main-color;
-      text-decoration: none;
-      &:hover {
-        color: $color-yellow;
-        @include easeOut();
-      }
+  .top-bar-container {
+    display: flex;
+    font-size: 14px;
+
+    .top-bar-left {
+      margin-right: auto;
     }
-  }
-
-  @include mediaS() {
-    display: block;
-    text-align: center;
+    .top-bar-right {
+      margin-left: auto;
+    }
+    @include mediaMd {
+      display: block;
+      text-align: center;
+    }
   }
 }
 
-//Logo And INfo for contacts
-.address-info {
+.logo-contact-info-container {
   display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
+  margin-top: 20px;
 
-  ul {
-    margin-left: 15px;
-    border-left: 1px solid #ccc;
-    padding-left: 10px;
+  .logo {
+    margin-right: auto;
   }
+  .contact-info {
+    margin-left: auto;
+    display: flex;
+    align-items: center;
 
-  i {
-    color: $color-yellow;
+    ul {
+      border-left: 1px solid #ccc;
+      padding-left: 10px;
+      margin-left: 10px;
+    }
+    i {
+      padding-left: 10px;
+    }
   }
-
-  @include mediaS {
+  @include mediaMd {
     display: block;
     text-align: center;
 
-    ul {
-      border: none;
+    .contact-info {
+      display: block;
+      text-align: center;
+
+      ul {
+        border: 0px;
+        padding: 0;
+        margin: 0;
+      }
+
+      i {
+        padding: 0;
+      }
     }
   }
 }

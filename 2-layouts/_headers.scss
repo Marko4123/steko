@@ -1,0 +1,13 @@
+header {
+  i {
+    color: $color-yellow;
+  }
+  a {
+    color: $main-color;
+    text-decoration: none;
+    @include easeOut();
+    &:hover {
+      color: $color-yellow;
+    }
+  }
+}

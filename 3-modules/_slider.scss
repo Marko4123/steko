@@ -1,8 +1,8 @@
-//Slider
 .carousel-item {
   img {
     width: 100%;
   }
+
   .slider-header-wrap {
     position: absolute;
     width: 80%;
@@ -24,7 +24,6 @@
       background: $color-yellow;
       padding: 10px 5px;
       opacity: 0.8;
-
       @include mediaMd {
         display: none;
       }

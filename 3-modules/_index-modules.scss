@@ -1,32 +1,31 @@
-//Short Info on index page
-.short-info-wrap {
+//Short presentation
+.short-presentation-bg {
+  width: 100%;
   background: url(img/hand-with-cap.png) no-repeat right top;
   background-size: cover;
 
-  .short-info {
+  .short-presentation {
     position: relative;
     background: $main-bg;
     box-shadow: rgba(0, 0, 0, 0.15) 0px 0px 24px 0px;
     padding: 10px;
-    margin-top: -85px;
+    margin-top: -75px;
     display: flex;
     flex-wrap: wrap;
-    .short-info-box {
+
+    .short-presentation-box {
       flex: 0 0 50%;
       max-width: 50%;
       padding-right: 15px;
       padding-left: 15px;
-      @include mediaMd {
-        flex: 0 0 100%;
-        max-width: 100%;
+
+      h3 {
+        text-transform: uppercase;
       }
     }
 
     h1 {
       color: $color-blue;
-    }
-
-    h3 {
       text-transform: uppercase;
     }
     .color-yellow {
@@ -34,163 +33,10 @@
     }
 
     @include mediaMd {
-      margin: 0;
-    }
-  }
-}
-
-//IMage Links on Index page
-.image-links-wrap {
-  margin-top: 20px;
-
-  .test-grid {
-    display: flex;
-    flex-wrap: wrap;
-  }
-  .image-links-box {
-    position: relative;
-    margin-bottom: 20px;
-    flex: 0 0 25%; /* explanation below */
-    max-width: 25%;
-    padding-left: 15px;
-    padding-right: 15px;
-
-    @include mediaMd {
-      flex: 0 0 33.333333%;
-      max-width: 33.333333%;
-    }
-    @include mediaS {
-      flex: 0 0 50%;
-      max-width: 50%;
-    }
-    @include mediaXS {
-      flex: 100%;
-      max-width: 100%;
-    }
-
-    img {
-      margin: 0;
-      width: 100%;
-      height: auto;
-    }
-
-    .overlay {
-      background: rgba(1, 71, 127, 0.75);
-      @include easeOut();
-      color: #fff;
-      position: absolute;
-      opacity: 0;
-      display: block;
-      bottom: 0;
-      left: 0;
-      right: 0;
-      width: 100%;
-      height: 100%;
-
-      .text {
-        position: absolute;
-        @include easeOut();
-        top: 50%;
-        left: 50%;
-        -webkit-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-        text-align: center;
-
-        h3 > a {
-          text-decoration: none;
-          color: #fff;
-          text-transform: uppercase;
-          font-weight: 700;
-        }
-      }
-    }
-    &:hover {
-      .overlay {
-        opacity: 1;
-      }
-    }
-  }
-}
-
-//Yellow part on Index Page
-.yellow-part-wrap {
-  display: flex;
-  min-height: 230px;
-  @include mediaMd {
-    display: block;
-    min-height: 0;
-  }
-
-  .light-yellow {
-    flex: 50%;
-    background: #fbc228;
-    color: $color-blue;
-    min-height: 230px;
-    @include mediaMd {
-      min-height: 0;
-    }
-
-    .yellow-part-title {
-      float: right;
-      padding-right: 80px;
-      padding-left: 10px;
-      padding-top: 80px;
-      text-transform: uppercase;
-      clear: both;
-      @include mediaMd {
-        float: none;
-        text-align: center;
-        padding: 10px 10px;
-      }
-    }
-  }
-
-  .dark-yellow {
-    background: #efb90b;
-    position: relative;
-    flex: 50%;
-    min-height: 230px;
-    @include mediaMd {
-      min-height: 0;
-    }
-
-    &::before {
-      content: "";
-      border-right: 40px solid;
-      border-top: 115px solid transparent;
-      border-bottom: 115px solid transparent;
-      left: -40px;
-      position: absolute;
-      top: 0;
-      z-index: 9;
-      color: #efb90b;
-    }
-
-    .yellow-part-btn {
-      padding-top: 80px;
-      @include mediaMd {
-        text-align: center;
-        padding: 10px 10px;
-      }
-
-      a {
-        padding: 16px 40px;
-        border: 1px solid;
-        border-color: $color-blue;
-        text-transform: uppercase;
-        line-height: normal;
-        display: inline-block;
-        outline: none;
-        letter-spacing: 1px;
-        @include easeOut();
-        color: #666;
-        text-decoration: none;
-
-        &:hover {
-          color: $color-yellow;
-          background-color: $color-blue;
-        }
+      margin-top: 0px;
+      .short-presentation-box {
+        flex: 0 0 100%;
+        max-width: 100%;
       }
     }
   }
