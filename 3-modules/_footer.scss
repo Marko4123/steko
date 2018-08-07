@@ -1,0 +1,236 @@
+//Yellow arena
+#yellow-arena {
+  margin-top: 20px;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  min-height: 230px;
+  position: relative;
+
+  .light-yellow {
+    flex: 0 0 50%;
+    max-width: 50%;
+    background: $color-yellow;
+    min-height: 230px;
+
+    .light-yellow-headers {
+      float: right;
+      clear: both;
+      padding-right: 60px;
+      padding-left: 20px;
+      padding-top: 80px;
+
+      color: $color-blue;
+      text-transform: uppercase;
+
+      h2 {
+        margin-bottom: 10px;
+      }
+    }
+  }
+
+  .dark-yellow {
+    flex: 0 0 50%;
+    max-width: 50%;
+    position: relative;
+    background: #efb90b;
+    min-height: 230px;
+
+    &::before {
+      position: absolute;
+      content: "";
+      border-right: 40px solid;
+      border-top: 115px solid transparent;
+      border-bottom: 115px solid transparent;
+      left: -40px;
+      top: 0;
+      z-index: 9;
+      color: #efb90b;
+    }
+
+    .dark-yellow-btn {
+      float: left;
+      clear: both;
+      padding-top: 80px;
+
+      a {
+        padding: 16px 40px;
+        border: 1px solid $color-blue;
+        text-transform: uppercase;
+        line-height: normal;
+        display: inline-block;
+        cursor: pointer;
+        outline: none;
+        letter-spacing: 1px;
+        @include easeOut();
+        color: #666;
+
+        &:hover {
+          color: $color-yellow;
+          background-color: $color-blue;
+        }
+      }
+    }
+  }
+
+  @include mediaMd {
+    min-height: 100%;
+    .light-yellow {
+      flex: 0 0 100%;
+      max-width: 100%;
+      min-height: 100%;
+      .light-yellow-headers {
+        float: none;
+        text-align: center;
+        padding: 30px 0;
+      }
+    }
+    .dark-yellow {
+      flex: 0 0 100%;
+      max-width: 100%;
+      min-height: 100%;
+
+      .dark-yellow-btn {
+        padding-top: 30px;
+        padding-bottom: 30px;
+        float: none;
+        text-align: center;
+      }
+    }
+  }
+}
+
+//Blue Arena
+#blue-arena {
+  background: rgb(0, 105, 190);
+  background: -webkit-linear-gradient(
+    top,
+    rgb(0, 105, 190) 0%,
+    rgb(1, 70, 127) 100%
+  );
+  background: -moz-linear-gradient(
+    top,
+    rgb(0, 105, 190) 0%,
+    rgb(1, 70, 127) 100%
+  );
+  background: linear-gradient(top, rgb(0, 105, 190) 0%, rgb(1, 70, 127) 100%);
+  color: rgba(255, 255, 255, 0.6);
+  padding-top: 20px;
+  padding-bottom: 20px;
+
+  .blue-arena-box-wrap {
+    display: flex;
+    flex-wrap: wrap;
+
+    .blue-arena-box {
+      padding-left: 15px;
+      padding-right: 15px;
+    }
+
+    .blue-arena-box-col-1 {
+      flex: 0 0 50%;
+      max-width: 50%;
+
+      p {
+        margin-top: 10px;
+      }
+    }
+    .blue-arena-box-col-2 {
+      flex: 0 0 25%;
+      max-width: 25%;
+
+      div {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: baseline;
+        margin-bottom: 20px;
+
+        span {
+          padding-right: 10px;
+          color: $color-yellow;
+        }
+      }
+    }
+
+    a {
+      color: rgba(255, 255, 255, 0.6);
+      @include easeOut();
+
+      &:hover {
+        color: $color-yellow;
+      }
+    }
+
+    h5 {
+      color: #fff;
+      text-transform: uppercase;
+      border-left: 4px solid $color-yellow;
+      padding-left: 15px;
+      margin-bottom: 10px;
+      font-size: 18px;
+      font-weight: 700;
+      letter-spacing: 0px;
+    }
+
+    ul.social {
+      font-size: 21px;
+      margin-top: 20px;
+      li {
+        display: inline-block;
+        padding-right: 20px;
+
+        a {
+          color: #fff;
+          @include easeOut();
+
+          &:hover {
+            color: $color-yellow;
+          }
+        }
+      }
+    }
+
+    @include mediaMd {
+      .blue-arena-box {
+        flex: 0 0 100%;
+        max-width: 100%;
+        margin-bottom: 20px;
+      }
+    }
+  }
+}
+
+//Copyright
+#copyright-arena {
+  background-color: #00294a;
+  padding-top: 15px;
+  padding-bottom: 10px;
+  font-size: 13px;
+
+  .copyright-arena-container {
+    display: flex;
+    flex-wrap: wrap;
+    color: rgba(255, 255, 255, 0.6);
+
+    .rights {
+      margin-right: auto;
+    }
+
+    .created-by {
+      margin-left: auto;
+
+      a {
+        @include easeOut();
+
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+  @include mediaXS {
+    .copyright-arena-container {
+      display: block;
+    }
+  }
+}
