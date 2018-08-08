@@ -174,8 +174,8 @@ body {
   line-height: 28px;
   background: #fff;
   color: #000;
-  height: 100%;
-  font-size: 14px; }
+  font-size: 14px;
+  height: 100%; }
 
 @media (max-width: 575.98px) {
   h1,
@@ -416,7 +416,6 @@ a.main-btn {
 
 #wrapper {
   display: flex;
-  /* use the flex model */
   min-height: 100%;
   flex-direction: column; }
 
@@ -432,8 +431,8 @@ header a {
   header a:hover {
     color: #fec200; }
 
-#main {
-  flex: 1; }
+main {
+  flex: 1 0 auto; }
 
 #top-bar {
   width: 100%;
@@ -483,67 +482,71 @@ header a {
 .navbar-light {
   border-top: 1px solid #ccc;
   margin-top: 20px; }
-  .navbar-light .navbar-nav .nav-link {
-    text-transform: uppercase;
-    font-weight: bold;
-    color: #000;
-    -webkit-transition: all 0.5s ease-out;
-    -moz-transition: all 0.5s ease-out;
-    -o-transition: all 0.5s ease-out;
-    transition: all 0.5s ease-out; }
-    .navbar-light .navbar-nav .nav-link:hover {
-      color: #fec200; }
-  .navbar-light .navbar-nav .mega-dropdown {
-    position: static !important; }
-    .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu {
-      padding: 10px 10px;
-      width: 100%;
-      background: #fff url(img/nav-bg.jpg) no-repeat center center;
-      background-size: cover; }
-      .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu .dropdown-header {
-        color: #01477f;
-        text-transform: uppercase;
-        font-size: 18px;
-        font-weight: 700;
-        border-left: 5px solid #fec200;
-        white-space: normal !important;
-        margin: 10px 0;
-        padding: 0px 0px 0px 10px !important; }
-      .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu ul {
-        list-style: none;
-        margin: 10px 0; }
-      .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li {
-        position: relative; }
-        .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li::before {
-          position: absolute;
-          content: "";
-          display: block;
-          width: 0;
-          height: 2px;
-          background: #fec200;
-          left: 0;
-          bottom: 0;
-          top: auto;
-          z-index: 9;
-          -webkit-transition: all 0.3s linear;
-          -moz-transition: all 0.3s linear;
-          -o-transition: all 0.3s linear;
-          -ms-transition: all 0.3s linear;
-          transition: all 0.3s linear; }
-        .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li:hover::before {
-          width: 100%; }
-        .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li a {
-          color: #000;
-          font-size: 14px;
+  .navbar-light .navbar-nav {
+    display: flex !important; }
+    .navbar-light .navbar-nav .nav-link {
+      text-transform: uppercase;
+      font-weight: bold;
+      color: #000;
+      -webkit-transition: all 0.5s ease-out;
+      -moz-transition: all 0.5s ease-out;
+      -o-transition: all 0.5s ease-out;
+      transition: all 0.5s ease-out; }
+      .navbar-light .navbar-nav .nav-link:hover {
+        color: #fec200; }
+      .navbar-light .navbar-nav .nav-link.current {
+        color: #fec200; }
+    .navbar-light .navbar-nav .mega-dropdown {
+      position: static !important; }
+      .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu {
+        padding: 10px 10px;
+        width: 100%;
+        background: #fff url(img/nav-bg.jpg) no-repeat center center;
+        background-size: cover; }
+        .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu .dropdown-header {
+          color: #01477f;
           text-transform: uppercase;
-          text-decoration: none;
-          border-bottom: 2px solid rgba(0, 0, 0, 0.15);
-          padding: 5px 0;
-          display: block; }
-          .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li a.current {
-            border-bottom: 2px solid #fec200; }
-  .navbar-light .navbar-nav .show > .nav-link {
-    color: #fec200; }
+          font-size: 18px;
+          font-weight: 700;
+          border-left: 5px solid #fec200;
+          white-space: normal !important;
+          margin: 10px 0;
+          padding: 0px 0px 0px 10px !important; }
+        .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu ul {
+          list-style: none;
+          margin: 10px 0; }
+        .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li {
+          position: relative; }
+          .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li::before {
+            position: absolute;
+            content: "";
+            display: block;
+            width: 0;
+            height: 2px;
+            background: #fec200;
+            left: 0;
+            bottom: 0;
+            top: auto;
+            z-index: 9;
+            -webkit-transition: all 0.3s linear;
+            -moz-transition: all 0.3s linear;
+            -o-transition: all 0.3s linear;
+            -ms-transition: all 0.3s linear;
+            transition: all 0.3s linear; }
+          .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li:hover::before {
+            width: 100%; }
+          .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li a {
+            color: #000;
+            font-size: 14px;
+            text-transform: uppercase;
+            text-decoration: none;
+            border-bottom: 2px solid rgba(0, 0, 0, 0.15);
+            padding: 5px 0;
+            display: block; }
+            .navbar-light .navbar-nav .mega-dropdown .mega-dropdown-menu li a.current {
+              border-bottom: 2px solid #fec200; }
+    .navbar-light .navbar-nav .show > .nav-link {
+      color: #fec200; }
   @media (max-width: 991.98px) {
     .navbar-light .nav-fill .nav-item {
       text-align: left; } }
@@ -662,6 +665,44 @@ header a {
       #image-links-wrap .image-links-box-wrap .image-links-box img {
         width: 100%;
         height: auto; }
+
+.full-company-presentation h1,
+.full-company-presentation h2 {
+  color: #01477f;
+  text-transform: uppercase;
+  margin-bottom: 20px; }
+  .full-company-presentation h1 .color-yellow,
+  .full-company-presentation h2 .color-yellow {
+    color: #fec200; }
+.full-company-presentation .full-company-presentation-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  margin-top: 20px; }
+  .full-company-presentation .full-company-presentation-row .full-company-presentation-box {
+    flex: 0 0 50%;
+    max-width: 50%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px; }
+    .full-company-presentation .full-company-presentation-row .full-company-presentation-box .img-wrap img {
+      max-width: 100%;
+      height: auto;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+      border: 10px solid #fff;
+      background-color: #fff;
+      overflow: hidden;
+      border-radius: 5px;
+      box-shadow: 0 0 40px 7px rgba(0, 0, 0, 0.2);
+      -webkit-box-shadow: 0 0 40px 7px rgba(0, 0, 0, 0.2);
+      -moz-box-shadow: 0 0 40px 7px rgba(0, 0, 0, 0.2); }
+    @media (max-width: 991.98px) {
+      .full-company-presentation .full-company-presentation-row .full-company-presentation-box {
+        flex: 0 0 100%;
+        max-width: 100%;
+        padding: 0; }
+        .full-company-presentation .full-company-presentation-row .full-company-presentation-box .img-wrap {
+          display: none; } }
 
 #yellow-arena {
   margin-top: 20px;

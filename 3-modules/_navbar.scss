@@ -2,6 +2,7 @@
   border-top: 1px solid #ccc;
   margin-top: 20px;
   .navbar-nav {
+    display: flex !important;
     .nav-link {
       text-transform: uppercase;
       font-weight: bold;
@@ -9,6 +10,10 @@
       @include easeOut();
 
       &:hover {
+        color: $color-yellow;
+      }
+
+      &.current {
         color: $color-yellow;
       }
     }
