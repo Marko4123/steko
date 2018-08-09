@@ -25,10 +25,6 @@
     -moz-transform: rotate(-45deg);
     -ms-transform: rotate(-45deg);
     margin: 0 auto;
-    filter: invert(100%);
-    -moz-filter: invert(100%);
-    -webkit-filter: invert(100%);
-    -ms-filter: invert(100%);
     @include TransitionLinear($time: 0.5s);
     max-width: 100%;
     height: auto;
@@ -43,10 +39,7 @@
     -ms-transform: rotate(-45deg);
 
     img {
-      filter: inherit;
-      -moz-filter: inherit;
-      -webkit-filter: inherit;
-      -ms-filter: inherit;
+      
       transform: rotate(45deg);
       -webkit-transform: rotate(45deg);
       -moz-transform: rotate(45deg);
@@ -165,10 +158,6 @@ a {
     border-radius: 50%;
     @include easeOut();
     background-size: 50%;
-    filter: invert(100%);
-    -webkit-filter: invert(100%);
-    -moz-filter: invert(100%);
-    -ms-filter: invert(100%);
   }
 
   &:hover {
@@ -180,10 +169,6 @@ a {
     &::after {
       -webkit-transition-delay: 0.3s;
       transition-delay: 0.3s;
-      filter: invert(0);
-      -webkit-filter: invert(0);
-      -moz-filter: invert(0);
-      -ms-filter: invert(0);
     }
   }
 }

@@ -14,6 +14,8 @@
     flex-wrap: wrap;
     align-items: center;
     margin-top: 20px;
+    margin-left: -15px;
+    margin-right: -15px;
 
     .full-company-presentation-box {
       flex: 0 0 50%;
@@ -40,9 +42,8 @@
       @include mediaMd {
         flex: 0 0 100%;
         max-width: 100%;
-        padding: 0;
 
-        .img-wrap {
+        &.hidden-box {
           display: none;
         }
       }
