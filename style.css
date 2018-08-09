@@ -171,7 +171,6 @@ body {
   font-family: "Open Sans", sans-serif;
   font-weight: normal;
   font-size: 16px;
-  line-height: 28px;
   background: #fff;
   color: #000;
   font-size: 14px;
@@ -818,33 +817,22 @@ main {
         max-width: 100%; } }
 
 #yellow-arena {
-  margin-top: 20px;
-  width: 100%;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   min-height: 230px;
-  position: relative; }
+  margin-top: 20px; }
   #yellow-arena .light-yellow {
     flex: 0 0 50%;
     max-width: 50%;
-    background: #fec200;
-    min-height: 230px; }
-    #yellow-arena .light-yellow .light-yellow-headers {
-      float: right;
-      clear: both;
-      padding-right: 60px;
-      padding-left: 10px;
-      padding-top: 80px;
-      color: #01477f;
-      text-transform: uppercase; }
-      #yellow-arena .light-yellow .light-yellow-headers h2 {
-        margin-bottom: 10px; }
+    min-height: 230px;
+    background: #fec200; }
   #yellow-arena .dark-yellow {
     flex: 0 0 50%;
     max-width: 50%;
-    position: relative;
+    min-height: 230px;
     background: #efb90b;
-    min-height: 230px; }
+    position: relative; }
     #yellow-arena .dark-yellow::before {
       position: absolute;
       content: "";
@@ -855,47 +843,69 @@ main {
       top: 0;
       z-index: 9;
       color: #efb90b; }
-    #yellow-arena .dark-yellow .dark-yellow-btn {
-      float: left;
-      clear: both;
-      padding-top: 80px; }
-      #yellow-arena .dark-yellow .dark-yellow-btn a {
-        padding: 16px 40px;
-        border: 1px solid #01477f;
-        text-transform: uppercase;
-        line-height: normal;
-        display: inline-block;
-        cursor: pointer;
-        outline: none;
-        letter-spacing: 1px;
-        -webkit-transition: all 0.5s ease-out;
-        -moz-transition: all 0.5s ease-out;
-        -o-transition: all 0.5s ease-out;
-        transition: all 0.5s ease-out;
-        color: #666; }
-        #yellow-arena .dark-yellow .dark-yellow-btn a:hover {
-          color: #fec200;
-          background-color: #01477f; }
+  #yellow-arena .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-transform: uppercase;
+    color: #01477f; }
+    #yellow-arena .container h2 {
+      margin-bottom: 20px; }
+    #yellow-arena .container .footer-content-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center; }
+      #yellow-arena .container .footer-content-wrap .content-left {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 60px; }
+      #yellow-arena .container .footer-content-wrap .content-right {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 20px; }
+        #yellow-arena .container .footer-content-wrap .content-right .content-right-btn {
+          float: right; }
+          #yellow-arena .container .footer-content-wrap .content-right .content-right-btn a {
+            padding: 16px 40px;
+            border: 1px solid #01477f;
+            text-transform: uppercase;
+            display: inline-block;
+            -webkit-transition: all 0.5s ease-out;
+            -moz-transition: all 0.5s ease-out;
+            -o-transition: all 0.5s ease-out;
+            transition: all 0.5s ease-out;
+            color: #666; }
+            #yellow-arena .container .footer-content-wrap .content-right .content-right-btn a:hover {
+              color: #fec200;
+              background-color: #01477f; }
   @media (max-width: 991.98px) {
-    #yellow-arena {
-      min-height: 100%; }
-      #yellow-arena .light-yellow {
+    #yellow-arena .light-yellow {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    #yellow-arena .dark-yellow {
+      flex: 0 0 100%;
+      max-width: 100%; }
+    #yellow-arena .container {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0; }
+      #yellow-arena .container .footer-content-wrap .content-left {
         flex: 0 0 100%;
         max-width: 100%;
-        min-height: 100%; }
-        #yellow-arena .light-yellow .light-yellow-headers {
-          float: none;
-          text-align: center;
-          padding: 30px 10px; }
-      #yellow-arena .dark-yellow {
+        padding-right: 0;
+        margin-bottom: 180px;
+        padding-top: 60px;
+        text-align: center; }
+      #yellow-arena .container .footer-content-wrap .content-right {
         flex: 0 0 100%;
         max-width: 100%;
-        min-height: 100%; }
-        #yellow-arena .dark-yellow .dark-yellow-btn {
-          padding-top: 30px;
-          padding-bottom: 30px;
-          float: none;
-          text-align: center; } }
+        text-align: center;
+        padding-left: 0; }
+        #yellow-arena .container .footer-content-wrap .content-right .content-right-btn {
+          float: none; } }
 
 #blue-arena {
   background: #0069be;

@@ -1,40 +1,24 @@
 //Yellow arena
 #yellow-arena {
-  margin-top: 20px;
-  width: 100%;
+  position: relative;
   display: flex;
   flex-wrap: wrap;
   min-height: 230px;
-  position: relative;
+  margin-top: 20px;
 
   .light-yellow {
     flex: 0 0 50%;
     max-width: 50%;
-    background: $color-yellow;
     min-height: 230px;
-
-    .light-yellow-headers {
-      float: right;
-      clear: both;
-      padding-right: 60px;
-      padding-left: 10px;
-      padding-top: 80px;
-
-      color: $color-blue;
-      text-transform: uppercase;
-
-      h2 {
-        margin-bottom: 10px;
-      }
-    }
+    background: $color-yellow;
   }
 
   .dark-yellow {
     flex: 0 0 50%;
     max-width: 50%;
-    position: relative;
-    background: #efb90b;
     min-height: 230px;
+    background: #efb90b;
+    position: relative;
 
     &::before {
       position: absolute;
@@ -47,54 +31,95 @@
       z-index: 9;
       color: #efb90b;
     }
+  }
 
-    .dark-yellow-btn {
-      float: left;
-      clear: both;
-      padding-top: 80px;
+  //Footer content
+  .container {
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 10;
+    text-transform: uppercase;
+    color: $color-blue;
 
-      a {
-        padding: 16px 40px;
-        border: 1px solid $color-blue;
-        text-transform: uppercase;
-        line-height: normal;
-        display: inline-block;
-        cursor: pointer;
-        outline: none;
-        letter-spacing: 1px;
-        @include easeOut();
-        color: #666;
+    h2 {
+      margin-bottom: 20px;
+    }
 
-        &:hover {
-          color: $color-yellow;
-          background-color: $color-blue;
+    .footer-content-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
+
+      .content-left {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-right: 60px;
+      }
+
+      .content-right {
+        flex: 0 0 50%;
+        max-width: 50%;
+        padding-left: 20px;
+
+        .content-right-btn {
+          float: right;
+          a {
+            padding: 16px 40px;
+            border: 1px solid $color-blue;
+            text-transform: uppercase;
+            display: inline-block;
+            @include easeOut();
+            color: #666;
+
+            &:hover {
+              color: $color-yellow;
+              background-color: $color-blue;
+            }
+          }
         }
       }
     }
   }
 
   @include mediaMd {
-    min-height: 100%;
     .light-yellow {
       flex: 0 0 100%;
       max-width: 100%;
-      min-height: 100%;
-      .light-yellow-headers {
-        float: none;
-        text-align: center;
-        padding: 30px 10px;
-      }
     }
     .dark-yellow {
       flex: 0 0 100%;
       max-width: 100%;
-      min-height: 100%;
+    }
 
-      .dark-yellow-btn {
-        padding-top: 30px;
-        padding-bottom: 30px;
-        float: none;
-        text-align: center;
+    //Container Responsive Styles
+    .container {
+      position: absolute;
+      left: 50%;
+      transform: translateX(-50%);
+      top: 0;
+
+      .footer-content-wrap {
+        .content-left {
+          flex: 0 0 100%;
+          max-width: 100%;
+          padding-right: 0;
+          margin-bottom: 180px;
+          padding-top: 60px;
+          text-align: center;
+        }
+
+        .content-right {
+          flex: 0 0 100%;
+          max-width: 100%;
+          text-align: center;
+          padding-left: 0;
+
+          .content-right-btn {
+            float: none;
+          }
+        }
       }
     }
   }
