@@ -261,6 +261,38 @@
                     </div>
                 </div>
             </div>
+            <div id="contact-form-arena">
+                <div class="container">
+                    <div class="main-title">
+                        <div class="main-title-content">
+                            <h1>Контактна форма</h1>
+                        </div>
+                    </div>
+                    <div class="contact-form">
+                        <form method="POST" action="contacts" id="form-contact">
+                            <div class="inputs-holder">
+                                <div class="input-box">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="usr" name="username" placeholder="ВАШЕТО ИМЕ">
+                                    </div>
+                                </div>
+                                <div class="input-box">
+                                    <div class="form-group">
+                                        <input type="text" class="form-control" id="email" name="email" placeholder="ВАШИЯТ EMAIL">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <textarea class="form-control" rows="5" id="comment" placeholder="СЪОБЩЕНИЕ"></textarea>
+                            </div>
+                            <div class="g-recaptcha" data-sitekey="6LenAmUUAAAAALwFTYSiC_0iJuNmOBu82CK8rxhv"></div>
+                            <button type="submit" name="send" id="send" class="main-btn">Изпрати
+                                <span class="fas fa-paper-plane" aria-hidden="true"> </span>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
         </main>
         <footer>
             <div id="yellow-arena">
@@ -417,6 +449,7 @@
             });
         });
     </script>
+    <script src="https://www.google.com/recaptcha/api.js?hl=bg"></script>
 </body>
 
 </html>
