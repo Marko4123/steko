@@ -85,11 +85,10 @@ html {
 
 body {
   font-family: "Open Sans", sans-serif;
-  font-weight: normal;
-  font-size: $main-font-size;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #545454;
   background: $main-bg;
-  color: $main-color;
-  font-size: 14px;
   height: 100%;
 }
 
