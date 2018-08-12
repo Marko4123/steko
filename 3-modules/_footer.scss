@@ -105,8 +105,8 @@
           flex: 0 0 100%;
           max-width: 100%;
           padding-right: 0;
-          margin-bottom: 180px;
-          padding-top: 60px;
+          margin-bottom: 140px;
+          padding-top: 80px;
           text-align: center;
         }
 
@@ -119,6 +119,24 @@
           .content-right-btn {
             float: none;
           }
+        }
+      }
+    }
+  }
+  @include mediaS {
+    .container {
+      .footer-content-wrap {
+        .content-left {
+          margin-bottom: 150px;
+        }
+      }
+    }
+  }
+  @include mediaXS {
+    .container {
+      .footer-content-wrap {
+        .content-left {
+          margin-bottom: 170px;
         }
       }
     }
