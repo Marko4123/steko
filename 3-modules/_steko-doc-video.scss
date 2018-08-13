@@ -64,6 +64,13 @@
         }
       }
     }
+    .documentation-title {
+      color: #232323;
+      text-transform: uppercase;
+      font-weight: 600;
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
   }
   @include mediaS {
     .documentation-col {

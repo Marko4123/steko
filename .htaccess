@@ -1,6 +1,17 @@
 RewriteEngine On
-RewriteRule ^index\.html$ / [R=301,L]
-RewriteRule ^(.*)/index\.html$ /$1/ [R=301,L]
+
+## REMOVE .php extension ##
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteRule ^([^\.]+)$ $1.php [NC,L]
+
+## WWW TO NON WWW ##
+RewriteCond %{HTTP_HOST} ^www.test.steko.bg
+RewriteRule (.*) http://test.steko.bg/$1 [R=301,L]
+
+## index.php TO ROOT ##
+RewriteCond %{THE_REQUEST} ^.*/index\.php 
+RewriteRule ^(.*)index.php$ /$1 [R=301,L] 
+    
 ## EXPIRES CACHING ##
 ## BEGIN Enable GZIP Compression ##
 <IfModule mod_deflate.c>
