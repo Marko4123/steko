@@ -21,6 +21,7 @@
         background: $color-yellow;
         padding-top: 55px;
         padding-bottom: 35px;
+        padding-right: 60px;
 
         &::after {
           background: $color-yellow;
@@ -82,6 +83,9 @@
   @include mediaMd {
     .yellow-arena-row {
       .yellow-arena-col {
+        &.yellow-arena-light {
+          padding-right: 0px;
+        }
         &.yellow-arena-dark {
           &::before {
             border: none;
