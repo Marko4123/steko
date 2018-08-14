@@ -47,7 +47,7 @@
                                         <div class="dropdown-header">STEKO&#174; Продукти</div>
                                         <ul>
                                             <li>
-                                                <a href="steko/steko-walls">STEKO&#174; Стени</a>
+                                                <a href="steko/walls" <?php if($page =="walls") {echo 'class="current"';} ?>>STEKO&#174; Стени</a>
                                             </li>
                                             <li>
                                                 <a href="steko/steko-roof">STEKO&#174; Покрив</a>
@@ -100,7 +100,7 @@
                                                 <a href="steko/video" <?php if($page =="video") {echo 'class="current"';} ?>>Videos</a>
                                             </li>
                                             <li>
-                                                <a href="steko/projects">Проекти</a>
+                                                <a href="steko/projects" <?php if($page =="projects") {echo 'class="current"';} ?>>Проекти</a>
                                             </li>
                                         </ul>
 

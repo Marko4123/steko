@@ -1,3 +1,9 @@
+<?php 
+if(preg_match('/(?i)msie [1-9]/',$_SERVER['HTTP_USER_AGENT']))
+{
+    header( 'Location: https://www.google.com/chrome/' ) ;
+}
+?>
 <!DOCTYPE html>
 <html lang="bg">
 

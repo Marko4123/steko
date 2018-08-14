@@ -5,6 +5,7 @@
     <meta name="description" content="<?php echo $page_description; ?>"
     />
     <?php if ($page == "video") {echo '<link rel="stylesheet" href="../css/lity.min.css">';} ?>
+    <?php if ($page == "projects") {echo '<link rel="stylesheet" href="../0-plugins/node_modules/lightbox2/dist/css/lightbox.min.css">';} ?>
     <link rel="stylesheet" href="http://test.steko.bg/style.min.css">
     <style>
         .dropdown-menu {
