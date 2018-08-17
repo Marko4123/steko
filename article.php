@@ -1,11 +1,16 @@
+<?php require 'config.php'; ?>
 <!DOCTYPE html>
 <html lang="bg">
 
 <head>
 <?php
+        $actual_link = "http://$_SERVER[HTTP_HOST]$_SERVER[REQUEST_URI]";
+        $NewsId = intval(substr($actual_link, strrpos($actual_link, '/') + 1));
+        $qMeta = mysqli_query($db, "SELECT * FROM `NewsHeader` WHERE id = '$NewsId' LIMIT 1");
+        $rowMeta = mysqli_fetch_assoc($qMeta);
+        $page_title = $rowMeta['NewsTitle'];
+        $page_description = $rowMeta['NewsDesc'];
         $page = "article";
-        $page_title = "Steko България";
-        $page_description = "Строително-консултантска къща БОЕЛ ЕООД, извършва организиране и обслужване на строително-инвестиционни проекти. БОЕЛ ЕООД е и официален представител на SТЕКО за България. STEKO е нов начин на строителство. STEKO гарантира швейцарско качество.";
         ?>
             <?php include 'includes/header.php';?>
         <!-- NAVIGATION -->
@@ -18,29 +23,46 @@
                         <div class="sidebar-title">
                             <h3>Последни новини</h3>
                         </div>
-                        <div class="sidebar-img">
-                            <a href="">
-                                <img src="img/news/thumb/Blog-2-430x290.jpg" alt="Новина 1">
+                        <?php
+                        //Изкарване на последните 3 новини
+                        $LN_q = mysqli_query($db, "SELECT * FROM `NewsHeader` ORDER BY id DESC LIMIT 3 ");
+                        while ($LN_row = mysqli_fetch_assoc($LN_q)) {
+                            $LN_Title = $LN_row['NewsTitle'];
+                            $LN_ImgThumb = $LN_row['NewsImgThumb'];
+                            $LN_Desc = $LN_row['NewsDesc'];
+                            $LN_Id = $LN_row['id'];
+                            
+                            echo '
+                            <div class="sidebar-img">
+                            <a href="article/'.$LN_Id.'">
+                                <img src="img/news/thumb/'.$LN_ImgThumb.'" alt="'.$LN_Title.'">
                             </a>
                         </div>
                         <div class="sidebar-news-title">
                             <h6>
-                                <a href="">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Laborum, ipsam quaerat nisi doloremque
-                                    cumque placeat similique? Perferendis repudiandae facilis, aspernatur incidunt beatae
-                                    rerum explicabo. Molestias!</a>
+                                <a href="article/'.$LN_Id.'">'.$LN_Title.'</a>
                             </h6>
                         </div>
                         <div class="sidebar-news-date">
                             <p>
                                 <i class="far fa-clock"></i> 25 Jun 2018</p>
-                        </div>
+                        </div>';
+                        }
+                    ?>
+                        
                     </div>
                     <div class="full-news news-page-col">
+                    <?php
+                        //Изкарване на цялостоната новина
+                        $FN_q = mysqli_query($db, "SELECT * FROM `NewsContent` WHERE ContentId = '$NewsId' LIMIT 1");
+                        $FN_row = mysqli_fetch_assoc($FN_q);
+                        $FN_ImgBig = $FN_row['NewsImgBig'];
+                        $content = $FN_row['Content'];
+                    ?>
                         <div class="news-big-image">
-                            <img src="img/news/Blog-4-750x500.jpg" alt="Новина">
+                            <img src="img/news/<?php echo $FN_ImgBig; ?>" alt="Новина">
                             <div class="news-meta-content">
-                                <h1>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Corporis expedita, laboriosam omnis
-                                    exercitationem saepe incidunt?</h1>
+                                <h1><?php echo $page_title; ?></h1>
                                 <ul>
                                     <li>
                                         <img src="img/admin.png" alt="admin">
@@ -51,14 +73,7 @@
                             </div>
                         </div>
                         <div class="all-news article">
-                            <p>Sed cursus sem et pharetra aliquam. Mauris viverra venenatis lectus, vel porttitor urna fermentum
-                                at. Morbi metus neque, aliquet vitae cursus vel, ornare non felis. Praesent eleifend accumsan
-                                ante, vitae convallis dolor ultrices ac. Nam vitae orci erat. Duis efficitur in augue vitae
-                                rutrum. Vestibulum in arcu molestie, sodales turpis in, tincidunt enim.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laboriosam, eaque. Explicabo consequatur
-                                perferendis amet modi, dignissimos assumenda inventore accusantium, quas voluptates, adipisci
-                                quia itaque fuga molestias quod voluptate tempore consequuntur.</p>
-                            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aliquid, aliquam!</p>
+                            <?php echo $content; ?>
                         </div>
                         <div class="social-btns"></div>
                     </div>
