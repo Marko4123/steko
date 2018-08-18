@@ -4,6 +4,12 @@
     <title><?php echo $page_title; ?></title>
     <meta name="description" content="<?php echo $page_description; ?>"
     />
+    <meta property="fb:app_id" content="810791152459007" />
+    <meta property="og:url" content="<?php echo $page_url; ?>" />
+    <meta property="og:type" content="website" />
+    <meta property="og:description" content="<?php echo $page_description; ?>" />
+    <meta property="og:title" content="<?php echo $page_title; ?>" />
+    <meta property="og:image" content="<?php echo $page_img; ?>" />
     <?php if ($page == "video") {echo '<link rel="stylesheet" href="../css/lity.min.css">';} ?>
     <?php if ($page == "projects") {echo '<link rel="stylesheet" href="../0-plugins/node_modules/lightbox2/dist/css/lightbox.min.css">';} ?>
     <link rel="stylesheet" href="http://test.steko.bg/style.min.css">
