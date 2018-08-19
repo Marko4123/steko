@@ -17,7 +17,7 @@ class ViewCategories extends Categories {
         }
     }
 
-    //Функция за Seo линка към продукта
+    //Функция за форматиране на заглавието за линка
     function url_slug($str, $options = array()) {
         // Make sure string is in UTF-8 and strip invalid UTF-8 characters
         $str = mb_convert_encoding((string)$str, 'UTF-8', mb_list_encodings());
