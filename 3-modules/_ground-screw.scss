@@ -1,0 +1,43 @@
+.products-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  .products-col {
+    flex: 0 0 25%;
+    max-width: 25%;
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+
+    .products-box {
+      border: 1px solid $color-yellow;
+      padding: 10px;
+
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    .products-title {
+      text-transform: uppercase;
+      font-weight: 600;
+
+      h4 > a {
+        color: #232323;
+        @include easeOut();
+
+        &:hover {
+          color: $color-yellow;
+        }
+      }
+    }
+  }
+  @include mediaXS {
+    .products-col {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  }
+}

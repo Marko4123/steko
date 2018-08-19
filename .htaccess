@@ -15,6 +15,9 @@ RewriteRule ^(.*)index.php$ /$1 [R=301,L]
 ## SEO LINK NEWS ##
 RewriteRule ^news/([0-9]+) news.php?page=$1
 RewriteRule ^article/([0-9]+) article.php?page=$1
+
+## SEO LINK Categories ##
+RewriteRule ^categorie/([a-zA-Z0-9_-]+) categorie.php?page=$1
     
 ## EXPIRES CACHING ##
 ## BEGIN Enable GZIP Compression ##

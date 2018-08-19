@@ -5,6 +5,7 @@ class ViewArticle extends Article {
         $this->getMetaArticle();
         $title = $this->title;
         return $title;
+
     }
     //Функция изкарваща описанието на новината
     public function showArticleDesc() {

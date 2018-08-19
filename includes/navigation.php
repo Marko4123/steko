@@ -115,12 +115,14 @@
                             <div class="dropdown-menu mega-dropdown-menu">
                                 <div class="row">
                                     <div class="col-md-6">
-                                        <div class="dropdown-header">Винтове за основа</div>
-
-                                        <a href="ground-screw">
-                                            <img src="img/grounds-screw.jpg" alt="Grounds Screw" class="img-fluid" />
-                                        </a>
-
+                                        <div class="dropdown-header">Винтови Анкери</div>
+                                        <ul>
+                                            <li>
+                                            <a href="ground-screw" <?php if($page =="ground-screw") {echo 'class="current"';} ?>>
+                                                Каталог
+                                            </a>
+                                            </li>
+                                        </ul>
                                     </div>
                                 </div>
                             </div>
