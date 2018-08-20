@@ -1,8 +1,8 @@
 <?php 
 include 'includes/dbc.inc.php';
-include 'includes/article.inc.php';
-include 'includes/viewarticle.inc.php';
-$article = new ViewArticle();
+include 'includes/news.inc.php';
+include 'includes/viewnews.inc.php';
+$news = new ViewNews();
 ?>
 <!DOCTYPE html>
 <html lang="bg">
@@ -10,10 +10,10 @@ $article = new ViewArticle();
 <head>
 <?php
         
-        $page_title = $article->showArticleTitle();
-        $page_description = $article->showArticleDesc();
-        $page_url = $article->showArticleUrl();
-        $page_img = $article->showArticleImg();
+        $page_title = $news->getNewsTitle();
+        $page_description = $news->getNewsShortDesc();
+        $page_url = $news->getUrl();
+        $page_img ='http://test.steko.bg/img/news/thumb/'.$news->getNewsThumbImg();
         $page = "article";
         ?>
             <?php include 'includes/header.php';?>
@@ -27,10 +27,10 @@ $article = new ViewArticle();
                         <div class="sidebar-title">
                             <h3>Последни новини</h3>
                         </div>
-                        <?php $article->showLastNews();?>
+                        <?php $news->showLastThreeNews();?>
                     </div>
                     <div class="full-news news-page-col">
-                        <?php $article->showArticle(); ?>
+                        <?php $news->showNews(); ?>
                         <div class="addthis_inline_share_toolbox"></div>
                     </div>
                 </div>
