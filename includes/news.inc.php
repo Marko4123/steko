@@ -106,7 +106,7 @@ class News extends Dbc {
         $this->newsThumbImg = $row['NewsImgThumb'];
     }
     
-    //Финкция за връщане на заглавието на новината
+    //Метод за връщане на заглавието на новината
     public function getNewsTitle() {
         $this->setMetaTagsNews();
         return $this->newsTitle;
@@ -116,22 +116,22 @@ class News extends Dbc {
         $this->setMetaTagsNews();
         return $this->newsShortDesc;
     }
-    //Финкция за връщане на деня на новината
+    //Метод за връщане на деня на новината
     public function getNewsDay() {
         $this->setMetaTagsNews();
         return $this->newsDay;
     }
-    //Финкция за връщане на месеца на новината
+    //Метод за връщане на месеца на новината
     public function getNewsMonth() {
         $this->setMetaTagsNews();
         return $this->newsMonth;
     }
-    //Финкция за връщане на годината на новината
+    //Метод за връщане на годината на новината
     public function getNewsYear() {
         $this->setMetaTagsNews();
         return $this->newsYear;
     }
-    //Финкция за връщане на Thumb изображението на новината
+    //Метод за връщане на Thumb изображението на новината
     public function getNewsThumbImg() {
         $this->setMetaTagsNews();
         return $this->newsThumbImg;
