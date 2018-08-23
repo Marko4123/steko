@@ -7,8 +7,8 @@ class Dbc {
 
     protected function connect() {
         $this->servername = "localhost";
-        $this->username = "stekobgk_marko";
-        $this->password = "cicambas90";
+        $this->username = "";
+        $this->password = "";
         $this->dbname = "stekobgk_steko-new";
 
         $conn = new mysqli($this->servername, $this->username, $this->password, $this->dbname);
