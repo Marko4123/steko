@@ -14,10 +14,12 @@ RewriteRule ^(.*)index.php$ /$1 [R=301,L]
 
 ## SEO LINK NEWS ##
 RewriteRule ^news/([0-9]+) news.php?page=$1
-RewriteRule ^article/([0-9]+) article.php?page=$1
+RewriteRule ^article/([0-9]+)/([a-zA-Z0-9_-]+) article.php?page=$1
 
-## SEO LINK Categories ##
-RewriteRule ^categorie/([a-zA-Z0-9_-]+) categorie.php?page=$1
+## SEO LINK Products ##
+RewriteRule ^ground-screw/([0-9]+) ground-screw.php?page=$1
+RewriteRule ^products/([a-zA-Z0-9_-]+) products.php?page=$1
+RewriteRule ^product/([0-9]+)/([a-zA-Z0-9_-]+) product.php?page=$1
     
 ## EXPIRES CACHING ##
 ## BEGIN Enable GZIP Compression ##

@@ -2,7 +2,8 @@
 include 'includes/dbc.inc.php';
 include 'includes/news.inc.php';
 include 'includes/viewnews.inc.php';
-$news = new ViewNews();
+$page = "article";
+$news = new ViewNews($page);
 ?>
 <!DOCTYPE html>
 <html lang="bg">
@@ -14,7 +15,7 @@ $news = new ViewNews();
         $page_description = $news->getNewsShortDesc();
         $page_url = $news->getUrl();
         $page_img ='http://test.steko.bg/img/news/thumb/'.$news->getNewsThumbImg();
-        $page = "article";
+        
         ?>
             <?php include 'includes/header.php';?>
         <!-- NAVIGATION -->
@@ -30,6 +31,7 @@ $news = new ViewNews();
                         <?php $news->showLastThreeNews();?>
                     </div>
                     <div class="full-news news-page-col">
+                        
                         <?php $news->showNews(); ?>
                         <div class="addthis_inline_share_toolbox"></div>
                     </div>

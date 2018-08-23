@@ -2,14 +2,15 @@
 include 'includes/dbc.inc.php';
 include 'includes/news.inc.php';
 include 'includes/viewnews.inc.php';
-$news = new ViewNews();
+$page = "news";
+$news = new ViewNews($page);
 ?>
 <!DOCTYPE html>
 <html lang="bg">
 
 <head>
 <?php
-        $page = "news";
+        
         $page_title = "Steko България | Новини";
         $page_description = "Строително-консултантска къща БОЕЛ ЕООД, извършва организиране и обслужване на строително-инвестиционни проекти. БОЕЛ ЕООД е и официален представител на SТЕКО за България. STEKO е нов начин на строителство. STEKO гарантира швейцарско качество.";
         ?>
@@ -26,7 +27,7 @@ $news = new ViewNews();
                         </div>
                     </div>
                     <div class="news-row">
-                    <?php $news->showNewsPerPage();?>
+                    <?php $news->showAllNews();?>
                     </div>
                 <?php $news -> showPagination();?>
                 </div>

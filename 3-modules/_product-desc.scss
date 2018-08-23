@@ -1,0 +1,41 @@
+.product-desc-row {
+  display: flex;
+  flex-wrap: wrap;
+  margin-left: -15px;
+  margin-right: -15px;
+
+  .product-desc-col {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-bottom: 20px;
+
+    &.product-img {
+      img {
+        width: 100%;
+        height: auto;
+      }
+    }
+    &.product-desc {
+      ul li {
+        b {
+          font-weight: 600;
+        }
+      }
+      ul.tech-doc {
+        li {
+          display: inline-block;
+          vertical-align: middle;
+
+          a {
+            color: #000;
+            @include easeOut();
+
+            &:hover {
+              color: $color-yellow;
+            }
+          }
+        }
+      }
+    }
+  }
+}
